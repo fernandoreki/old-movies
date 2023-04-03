@@ -1,5 +1,5 @@
 <template>
-    <div class="row row justify-content-center bg-dark p-5">
+    <div class="row row justify-content-center bg-secondary p-5">
         <div class="card m-2" v-for="(movie, idx) in 10" :key="idx" style="width: 20rem;">
         <ul class="p-2">
             <ol class="col" >
