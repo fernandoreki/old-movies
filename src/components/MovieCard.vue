@@ -4,12 +4,13 @@
         <ul class="p-2">
             <ol class="col" >
                 <br>
-                <img :src="images[idx]" alt="image" class="card-img-top img-fluid">
+                <img v-if="images[idx] !== null" :src="images[idx]" alt="image" class="card-img-top img-fluid">
+                <img v-else="images[idx]" src="../assets/image-not-found.png" alt="image" class="card-img-top img-fluid">
                 <div class="card-body text-dark">
-                    <h3 class="card-title">{{ movies ? movies.results[idx].titleText.text : '' }}</h3> <br>
+                    <h3 class="card-title">{{ movies?.results[idx].titleText.text }}</h3> <br>
                     <p>
-                        Title type: {{ movies ? movies.results[idx].titleType.text : '' }} <br>
-                        Year: {{ movies ? movies.results[idx].releaseYear.year : '' }}
+                        Title type: {{ movies?.results[idx].titleType.text }} <br>
+                        Year: {{ movies?.results[idx].releaseYear.year }}
                     </p>
                 </div>
 
@@ -27,8 +28,9 @@ export default {
     props: {
         //define variables
     },
-    mounted() {
-        this.getMovies()
+    async mounted() {
+        await this.getMovies()
+        this.isMounted = true;
     },
     data() {
         return {
