@@ -1,5 +1,5 @@
 <template>
-    <nav class="navbar navbar-dark bg-secondary">
+    <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="https://rapidapi.com/SAdrian/api/moviesdatabase/">
                 <img src="https://cdn-icons-png.flaticon.com/512/2798/2798007.png" alt="" width="30" height="24"
