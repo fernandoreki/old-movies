@@ -1,5 +1,5 @@
 <template>
-    <div class="row row justify-content-center bg-dark p-5">
+    <div class="row justify-content-center bg-secondary p-5 holder">
         <div class="card m-2" v-for="(movie, idx) in movies" :key="idx" style="width: 20rem;">
         <ul class="p-2">
             <ol class="col" >
@@ -62,6 +62,10 @@ export default {
 <style scoped>
 img {
     width: 200px;
+}
+
+.holder {
+    border-radius: 5px;
 }
 
 
